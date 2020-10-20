@@ -1,0 +1,55 @@
+I"�<ol>
+  <li>
+    <p>设置数据库表前缀</p>
+
+    <p>编辑 app/environment.rb，加入</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> config.active_record.table_name_prefix = &amp;#x2018;prefix&amp;#x2019;
+</code></pre></div>    </div>
+
+    <p>同样，设置后缀</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> config.active_record.table_name_suffix = &amp;#x2018;suffix&amp;#x2019;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>解决数据库乱码</p>
+
+    <p>无非是set names utf-8：</p>
+
+    <p>编辑app/controllers/application.rb，加入before_filter，对数据库执行set names查询，例如：</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> class ApplicationController &lt; ActionController::Base
+ before_filter :set_default_charset
+   def set_default_charset
+     ActiveRecord::Base.connection.execute ‘SET NAMES utf8’;
+   end
+ end
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>rails 2已经不支持传统的scaffold写法，不过不是不能用scaffold，而是更简单：</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> scripts/generate scaffold book
+</code></pre></div>    </div>
+
+    <p>一句？真的只有一句</p>
+  </li>
+  <li>
+    <p>rails自动管理的数据库表字段</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> created_on, updated_on : date格式更新
+ created_at, updated_at : time格式更新
+ lock_version : 版本锁定
+ id : 主键
+ xxxx_id : 外键
+ xxxx_count : 子表xxxx的计数器
+ parent_id : act_as_tree的parent id
+ position ： act_as_list时的position
+</code></pre></div>    </div>
+
+    <p>还有些不常用的： type，lft，rgt，quote_value，template</p>
+  </li>
+</ol>
+
+:ET

@@ -1,0 +1,20 @@
+I"<p>用一个老鼠害了一锅汤来形容一个youbute视频搞砸了我的xhtml验证真是再恰当不过了, 本着对google的无限景仰和绝对的信任, 一度认为两者就像阶级矛盾一样不可调和, 不过后来终于发现, 其实不然:
+youtube的代码如下:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;object width="425" height="355"&gt;
+  &lt;param name="movie" value="http://www.youtube.com/v/ePyRrb2-fzs&amp;rel=0&amp;border=0"&gt;&lt;/param&gt;
+  &lt;param name="wmode" value="transparent"&gt;&lt;/param&gt;
+  &lt;embed src="http://www.youtube.com/v/ePyRrb2-fzs&amp;rel=0&amp;border=0" type="application/x-shockwave-flash" wmode="transparent"width="425" height="355"&gt;&lt;/embed&gt;
+&lt;/object&gt;
+</code></pre></div></div>
+
+<p>真是一段冗长的代码阿, 改下试试:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;object type="application/x-shockwave-flash" style="width:425px; height:350px;" data="http://www.youtube.com/v/ePyRrb2-fzs"&gt;
+  &lt;param name="movie" value="http://www.youtube.com/v/ePyRrb2-fzs" /&gt;
+&lt;/object&gt;
+</code></pre></div></div>
+
+<p>bingo, 代码精简的同时, 也能够通过xhtml验证了</p>
+
+:ET

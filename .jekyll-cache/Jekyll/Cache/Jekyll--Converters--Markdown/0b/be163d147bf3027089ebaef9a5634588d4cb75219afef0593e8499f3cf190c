@@ -1,0 +1,25 @@
+I"c<ol>
+  <li>
+    <p>检查flash插件的安装是否正确，根据我的经验flashplugin-nonfree这个比较稳定，尽管是nonfree的……GNU的那个经常崩溃</p>
+  </li>
+  <li>
+    <p>如果Flash可以正常浏览但是没有声音，则是Firefox的声音输出设置有问题，编辑/etc/firefox/firefoxrc文件，如果没有就创建一个好了</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo vi /etc/firefox/firefoxrc
+</code></pre></div>    </div>
+
+    <p>加入（或修改）</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> FIREFOX_DSP="aoss"
+</code></pre></div>    </div>
+
+    <p>aoss要视你的dsp而定，如esddsp，artsdsp，aoss（aoss要求已经安装了alsa-oss），也可以试一下auto，反正不能是none，呵呵</p>
+  </li>
+  <li>
+    <p>关闭firefox的所有进程，重启firefox，ok？enjoy～</p>
+  </li>
+</ol>
+
+<p>PS：适用于dapper ，其他版本或发行版firefoxrc文件可能不同，如/etc/mozilla-firefox/mozilla-firefoxrc等等</p>
+
+:ET

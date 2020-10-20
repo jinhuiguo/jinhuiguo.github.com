@@ -1,0 +1,70 @@
+I"�<blockquote>
+  <p>有插件的用插件，没插件的往下看</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>安装mutt：</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ~# apt-get install mutt
+</code></pre></div>    </div>
+
+    <p><em>设定发送的邮件信息，把domain.com改成实际的域名</em></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ~# echo -e 
+ set realname="no-reply" \n
+ # change your domain name here \n
+ set from="no-reply@domain.com" \n
+ set use_from=yes 
+ &gt; ~/muttrc-noreply
+</code></pre></div>    </div>
+
+    <p><em>mutt不是唯一选择，关于更多从命令行发送带附件邮件的信息可以看<a href="http://www.panix.com/~kylet/unix-att.html">Sending email with attachments on UNIX systems</a></em></p>
+  </li>
+  <li>
+    <p>在用户目录下新建一个shell脚本backup_database.sh，内容如下，将数据库用户名密码以及名称改为真实信息，RECIPENT改为收件人邮件地址：</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> #!/bin/sh
+
+ #database backup file name
+ FILE=~/database.tar.gz
+
+ DATE=`date +%Y-%m-%e`
+ TIME=`date +%H:%M`
+
+ #database user name
+ USER=username
+ #database user password                                                                                                                                                                             
+ PASS=password
+ #database to backup
+ DB=database
+
+ #mail subject
+ TITLE="[Backup] $DB on $DATE"#mail body
+ TEXT="$DB backuped at $DATE $TIME"
+ #mail recipientRECIPIENT=mail@mail.com
+
+ mysqldump -u$USER -p$PASS $DB | gzip &amp;gt; $FILE &amp;amp;&amp;amp; echo $TEXT | mutt -a $FILE -s "$TITLE" $RECIPIENT -F ~/muttrc-noreply
+ rm $FILE
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>设定crontab定期执行，此处设为每月一日0点0分</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ~# crontab -e
+
+ # m h  dom mon dow   command
+ 0 0 1 * * sh ~/backup_database.sh
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>PS1: 其实我不太在意做数据库备份，不过最近把ssh改成了rsa密匙认证，mb不能带到公司而家里又没有网络，直接导致了在公司不能ssh登录我的服务器。而ssh去vps的控制台，却赶上最近vpsvillage做服务器调整，一直无法登录。于是开始有点儿担心万一哪天vpsvillage真撂挑子不干了</p>
+
+<p>PS2: 搬家装网络真是一波三折，看房子的时候给我个地址，拿钥匙的时候告诉我正式的地址应该是这样这样这样的，于是直接致了我之前申请网络的地址作废。从头来过又是个把月。今年的4月和5月我一定过的很健康。</p>
+
+<p>PS3： 新家39平方的使用面积一个人住倒是也不算大。房子是哪儿都好，就是门太矮，搬来俩礼拜头上多了不少大包</p>
+
+<p>PS4: 前些天开玩笑把msn签名改成了“我的精神分裂已经治好了，现在我和我都很好”。于是收到了不少问候。。。在此我很感谢大家，不过我真没精神分裂，真的。。。</p>
+
+:ET

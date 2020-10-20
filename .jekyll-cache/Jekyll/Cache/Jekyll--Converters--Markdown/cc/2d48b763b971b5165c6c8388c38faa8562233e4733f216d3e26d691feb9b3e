@@ -1,0 +1,10 @@
+I"�<p>一直很喜欢 Echofon，可惜没有 TweetMarker 的支持，而且最常用的 Reply All 也没有相应的快捷键，所以一直停在 Twitterrific 上。</p>
+
+<p>昨天无意中发现 <a href="https://github.com/norio-nomura/SimblPluginsForEchofon">SimblPluginsForEchofon</a> 这里居然有个 Tweet Marker 的 Echofon 插件，于是重新折腾到 Echofon。</p>
+
+<p>Echofon 的快捷键支持其实已经很不错了，只是不知道为什么迟迟不肯加上 Reply All，只好自己动手了</p>
+
+<p>下载在 <a href="https://raw.github.com/waynezhang/ReplaceReplyWithReplyAllForEchofon/master/Builds/ReplaceReplyWithReplyAllForEchofon.tar.gz">这里</a>, 装好 <a href="http://www.culater.net/software/SIMBL/SIMBL.php">SIMBL</a> 后把 ReplaceReplyWithReplyAllForEchofon.bundle 放到 ~/Library/Application Support/SIMBL/Plugins，重启 Echofon 即可</p>
+
+<p>Source 也一并放到了 <a href="https://github.com/waynezhang/ReplaceReplyWithReplyAllForEchofon">Github</a></p>
+:ET

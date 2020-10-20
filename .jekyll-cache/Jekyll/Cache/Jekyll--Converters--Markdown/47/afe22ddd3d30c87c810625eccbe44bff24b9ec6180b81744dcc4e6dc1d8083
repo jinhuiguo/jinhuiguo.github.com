@@ -1,0 +1,27 @@
+I"�<p>上次说用<a href="http://gopherwood.info/2008/06/23/highlight-code-with-vim/index.html">vim来解决post里代码高亮</a>的问题, 然后收到了来自<a href="http://www.fayaa.com/code/">发芽网</a>的推荐</p>
+
+<blockquote>
+  <p>写博客时，没有代码高亮？
+发邮件时，代码格式很乱？
+有好代码，保存后很难找？</p>
+</blockquote>
+
+<p>来看下效果:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre style="font-family:"&gt;
+&lt;span style="text-decoration: underline"&gt;C++代码&lt;/span&gt;, 代码高亮@&lt;a href="http://www.fayaa.com/code/"&gt;代码发芽网&lt;/a&gt;
+
+&lt;div class="source"&gt;&lt;span class="lineno"&gt;1&lt;/span&gt; &lt;span class="_cp" style="color: #bc7a00"&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;&lt;span class="lineno"&gt;2&lt;/span&gt; &lt;span class="_kt" style="color: #b00040"&gt;int&lt;/span&gt;&lt;span class="_"&gt; &lt;/span&gt;&lt;span class="_n"&gt;main&lt;/span&gt;&lt;span class="_p"&gt;()&lt;/span&gt;&lt;span class="lineno"&gt;
+3&lt;/span&gt; &lt;span class="_p"&gt;{
+&lt;/span&gt;&lt;span class="lineno"&gt;4&lt;/span&gt; &lt;span class="_"&gt;    &lt;/span&gt;&lt;span class="_n"&gt;printf&lt;/span&gt;&lt;span class="_p"&gt;(&lt;/span&gt;&lt;span class="_s" style="color: #ba2121"&gt;"Hello world!"&lt;/span&gt;&lt;span class="_p"&gt;);
+&lt;/span&gt;&lt;span class="lineno special"&gt;5&lt;/span&gt; &lt;span class="lineno"&gt;
+6&lt;/span&gt; &lt;span class="_"&gt;    &lt;/span&gt;&lt;span class="_k" style="font-weight: bold;color: #008000"&gt;return&lt;/span&gt;&lt;span class="_"&gt; &lt;/span&gt;&lt;span class="_mi" style="color: #666666"&gt;0&lt;/span&gt;&lt;span class="_p"&gt;;
+&lt;/span&gt;&lt;span class="lineno"&gt;7&lt;/span&gt; &lt;span class="_p"&gt;}&lt;/span&gt;&lt;/div&gt;
+&lt;/pre&gt;
+</code></pre></div></div>
+
+<p>发芽网还支持code snippet的存储和搜索, 也就是类似代码snippet仓库的功能, 而事实上代码高亮也似乎只是这个功能的副产品.
+不过个人不太喜欢在html里嵌入style, 所以暂时还是用vim来搞定. 不在意这个又喜欢方便的, 发芽网的确是个不错的选择</p>
+
+:ET
