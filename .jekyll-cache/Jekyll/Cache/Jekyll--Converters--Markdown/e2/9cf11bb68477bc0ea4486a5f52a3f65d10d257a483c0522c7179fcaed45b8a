@@ -1,8 +1,0 @@
-I"�<p>默认的minicom是无法接受键盘输入的（#$R%@#^%&amp;^#%$@% 不知道怎么想的。。。）</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl ＋　Ａ　－＞　Ｏ　－＞　Ｓｅｒｉａｌ　Ｐｏｒｔ　Ｓｅｔｕｐ　－＞　Ｈａｒｄｗａｒｅ　Ｆｌｏｗ　Ｃｏｎｔｒｏｌ
-</code></pre></div></div>
-
-<p>改为Ｎｏ即可</p>
-
-:ET

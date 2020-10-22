@@ -1,8 +1,8 @@
-name: "rusty shutter"
+name: "Guojinhui blog"
 permalink: /:year/:month/:day/:title.html
 
-author: "wayne"
-atom-baseurl: "http://lhzhang.com"
+author: "Guojinhui"
+atom-baseurl: "https://jinhuiguo.github.io/"
 disqus: "gopherwood"
 
 navigations:
@@ -15,10 +15,9 @@ navigations:
   - title: About
     class: fa fa-user
     href: /about.html
-  - title: Gallery
-    class: fa fa-film
-    href: http://foto.lhzhang.com
-  - title: Subscribe
-    class: fa fa-rss
-    href: /atom.xml
-
+  # - title: Gallery
+  #   class: fa fa-film
+  #   href: http://foto.lhzhang.com
+  # - title: Subscribe
+  #   class: fa fa-rss
+  #   href: /atom.xml
