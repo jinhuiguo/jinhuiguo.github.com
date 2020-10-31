@@ -10,7 +10,7 @@ tags:
 
 
 <!-- 添加视频 -->
-<video id="video" controls="" preload="none" poster="https://vthumb.ykimg.com/05410408592926661E59083D9A0E8537">
+<video id="video" controls="" preload="none" poster="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-imgbed/e301ad43-a0f0-413d-80f5-4685d8f76c0f.png">
 <source id="mp4" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-imgbed/6bb4d032-2c66-4d2b-a08f-021f4b42eb5e.mp4" type="video/mp4"></video>
 
 
