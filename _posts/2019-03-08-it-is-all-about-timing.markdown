@@ -10,8 +10,9 @@ tags:
 
 
 <!-- 添加视频 -->
-<!-- <video id="video" controls="" preload="none" poster="https://vthumb.ykimg.com/05410408592926661E59083D9A0E8537">
-<source id="mp4" src="https://v.youku.com" type="video/mp4"></video> -->
+<video id="video" controls="" preload="none" poster="https://vthumb.ykimg.com/05410408592926661E59083D9A0E8537">
+<source id="mp4" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-imgbed/6bb4d032-2c66-4d2b-a08f-021f4b42eb5e.mp4" type="video/mp4"></video>
+
 
 
 
