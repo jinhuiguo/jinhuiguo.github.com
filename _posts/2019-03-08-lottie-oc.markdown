@@ -15,6 +15,7 @@ tags:
 
     打开Podfile文件
 
+    ```
     # Uncomment the next line to define a global platform for your project
 
     # platform :ios, '9.0'
@@ -30,3 +31,4 @@ tags:
     pod 'lottie-ios'
 
     end
+    ```
