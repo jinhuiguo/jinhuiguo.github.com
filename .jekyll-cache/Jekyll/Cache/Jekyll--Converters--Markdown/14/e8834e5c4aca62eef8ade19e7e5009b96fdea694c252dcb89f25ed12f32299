@@ -1,0 +1,149 @@
+I"x<div>
+  <ul class="listing">
+  
+  <article class="content">
+    <section class="title">
+      <h2><a href="/2019/03/08/lottie-oc.html">在Xcode中使用Lottie-OC</a></h2>
+    </section>
+    <section class="meta">
+    <span class="time">
+      <time datetime="2019-03-08">2019-03-08</time>
+    </span>
+    
+    <span class="tags">
+      
+      <a href="/tags.html#Lottie-OC" title="Lottie-OC">#Lottie-OC</a>
+      
+      <a href="/tags.html#Xcode" title="Xcode">#Xcode</a>
+      
+    </span>
+    
+    <!-- BEGIN this would not work on any other domain -->
+    <span class="like-wrapper" like-shortname="gopherwood" like-identifier="urn:uuid:80599c6f-70ee-44f0-8e34-9eb7ed776fce" like-name="在Xcode中使用Lottie-OC" like-link="https://jinhuiguo.github.io//" like-btn="&#xf087;"></span>
+    <script type="text/javascript">
+      var l = document.createElement('script'); l.type = 'text/javascript'; l.async = true;
+      l.src = 'https://like.lhzhang.com/javascript/widget.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(l);
+    </script>
+    <!-- END this would not work on any other domain -->
+    </section>
+    <section class="post">
+    <p>以前研究过的问题希望都能在blog上记录下来，以便后续遇到同样的问题可以很快的解决。</p>
+
+<ol>
+  <li>用CocoaPods安装Lottie动画库</li>
+</ol>
+
+<p>启动 Xcode 创建项目，项目路径必须是英文，比如：LottieDemo并保存。创建完项目必须完全退出 Xcode。打开Terminal，cd到自己的项目目录下（cd +空格+直接拖拽项目到终端），在terminal中运行 pod init 指令来创建一个Podfile。</p>
+
+<p>打开Podfile文件</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Uncomment the next line to define a global platform for your project
+
+# platform :ios, '9.0'
+
+target 'AnswerWindow' do
+
+# Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+
+# use_frameworks!
+
+# Pods for AnswerWindow
+
+pod 'lottie-ios'
+
+end
+</code></pre></div></div>
+
+<p>我们只加一行pod ‘lottie-ios’来指出这是这个项目需要的pod。然后回Terminal运行下列指令：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pod install
+</code></pre></div></div>
+
+<p>CocoaPods会下载Lottie动画库并在Xcode项目中打包。打包结束后你会发现出现一个叫LottieDemo.xcworkspace.的新项目文件。在Xcode中打开这个文件并开始进行编码。</p>
+
+<ol>
+  <li>Lottie使用
+```
+#import “ViewController.h”
+#import &lt;Lottie/Lottie.h&gt;</li>
+</ol>
+
+<p>@interface ViewController ()</p>
+
+<p>@property (nonatomic,strong) LOTAnimationView *lottieHeart;</p>
+
+<p>@end</p>
+
+<p>@implementation ViewController</p>
+
+<ul>
+  <li>
+    <p>(void)viewDidLoad {
+  [super viewDidLoad];</p>
+
+    <p>self.lottieHeart = [LOTAnimationView animationNamed:@”heart”];</p>
+
+    <p>self.lottieHeart.contentMode = UIViewContentModeScaleAspectFit;</p>
+  </li>
+</ul>
+
+<p>//    self.heart.backgroundColor = [UIColor redColor];</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[self.view addSubview:self.lottieHeart];
+
+self.lottieHeart.loopAnimation = YES;
+</code></pre></div></div>
+
+<p>}</p>
+
+<ul>
+  <li>
+    <p>(void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  [self.lottieHeart play];
+}</p>
+  </li>
+  <li>
+    <p>(void)viewDidDisappear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  [self.lottieHeart pause];</p>
+  </li>
+</ul>
+
+<p>}</p>
+
+<ul>
+  <li>
+    <p>(void)viewDidLayoutSubviews
+{
+  [super viewDidLayoutSubviews];
+  CGRect lottieRect = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);</p>
+
+    <p>self.lottieHeart.frame = lottieRect;
+}</p>
+  </li>
+</ul>
+
+<p>@end</p>
+
+<p>```</p>
+
+    </section>
+    </article>
+  
+  </ul>
+  <div class="divider"></div>
+  <ul class="listing main-listing">
+    <li class="listing-seperator">Happend earlier this year</li>
+  
+  
+    
+    
+    
+    <li class="listing-seperator"><a href="/archive.html">Long long ago</a></li>
+  </ul>
+</div>
+:ET

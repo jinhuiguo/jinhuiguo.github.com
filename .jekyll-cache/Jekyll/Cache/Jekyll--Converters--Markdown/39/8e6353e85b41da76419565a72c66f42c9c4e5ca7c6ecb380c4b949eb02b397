@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="Guojinhui" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
-    <title>Guojinhui blog</title>
-    
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link href="/atom.xml" rel="alternate" title="Guojinhui blog" type="application/atom+xml" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/media/css/style.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script type="text/javascript"> hljs.initHighlightingOnLoad(); </script>
-  </head>
-  <body>
-      <div id="main" role="main">
-        <header>
-          <div id="header">
-            <h1><a title="Guojinhui blog" class="" href="/">Guojinhui blog</a></h1>
-          </div>
-          <nav>
-            
-            <span><a title="Archive" href="/archive.html"><i class="fa fa-list-ul"></i></a></span>
-            
-            <span><a title="Tags" href="/tags.html"><i class="fa fa-tags"></i></a></span>
-            
-            <span><a title="About" href="/about.html"><i class="fa fa-user"></i></a></span>
-            
-          </nav>
-        </header>
-        <div id="content">
-        <div>
+I"�<div>
   <ul class="listing">
   
   <article class="content">
@@ -96,7 +62,7 @@ end
 
 <p>CocoaPods会下载Lottie动画库并在Xcode项目中打包。打包结束后你会发现出现一个叫LottieDemo.xcworkspace.的新项目文件。在Xcode中打开这个文件并开始进行编码。</p>
 
-<p>2.Lottie使用</p>
+<p>##Lottie使用</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "ViewController.h"
 #import &lt;Lottie/Lottie.h&gt;
@@ -165,14 +131,4 @@ end
     <li class="listing-seperator"><a href="/archive.html">Long long ago</a></li>
   </ul>
 </div>
-
-        </div>
-        <footer>
-          <div>
-            
-            &copy; 2020 Guojinhui | powered by jekyll | themed by <a href="https://jinhuiguo.github.io/" title="sext vi">Guojinhui</a> | fork <a href="https://github.com/jinhuiguo/jinhuiguo.github.com" title="fork me">me</a>
-          </div>
-        </footer>
-      </div> <!-- main -->
-  </body>
-</html>
+:ET

@@ -1,0 +1,28 @@
+I"<p>以前研究过的问题希望都能在blog上记录下来，以便后续遇到同样的问题可以很快的解决。</p>
+
+<ol>
+  <li>用CocoaPods安装Lottie动画库</li>
+</ol>
+
+<p>启动 Xcode 创建项目，项目路径必须是英文，比如：LottieDemo并保存。创建完项目必须完全退出 Xcode。打开Terminal，cd到自己的项目目录下（cd +空格+直接拖拽项目到终端），在terminal中运行 pod init 指令来创建一个Podfile。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    打开Podfile文件
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Uncomment the next line to define a global platform for your project
+
+# platform :ios, '9.0'
+
+target 'AnswerWindow' do
+
+# Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+
+# use_frameworks!
+
+# Pods for AnswerWindow
+
+pod 'lottie-ios'
+
+end
+</code></pre></div></div>
+:ET
