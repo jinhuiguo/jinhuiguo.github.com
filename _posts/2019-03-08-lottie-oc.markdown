@@ -1,0 +1,32 @@
+---
+title: 在Xcode中使用Lottie-OC
+layout: post
+guid: urn:uuid:80599c6f-70ee-44f0-8e34-9eb7ed776fce
+tags:
+  - Lottie-OC
+  - Xcode
+---
+
+以前研究过的问题希望都能在blog上记录下来，以便后续遇到同样的问题可以很快的解决。
+
+1. 用CocoaPods安装Lottie动画库
+
+    启动 Xcode 创建项目，项目路径必须是英文，比如：LottieDemo并保存。创建完项目必须完全退出 Xcode。打开Terminal，cd到自己的项目目录下（cd +空格+直接拖拽项目到终端），在terminal中运行 pod init 指令来创建一个Podfile。
+
+    打开Podfile文件
+
+    # Uncomment the next line to define a global platform for your project
+
+    # platform :ios, '9.0'
+
+    target 'AnswerWindow' do
+
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+
+    # use_frameworks!
+
+    # Pods for AnswerWindow
+
+    pod 'lottie-ios'
+
+    end
