@@ -1,0 +1,14 @@
+---
+title: '在线guid生成'
+layout: post
+guid: urn:uuid:b87da13a-a4dd-402f-b06a-cef7eeee2d80
+tags:
+    - guid
+---
+
+全局唯一标识符（GUID，Globally Unique Identifier）是一种由算法生成的二进制长度为128位的数字标识符。
+
+生成gudi网站
+```
+https://www.guidgen.com/
+```

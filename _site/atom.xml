@@ -4,7 +4,7 @@
  <title>Guojinhui blog</title>
  <link href="https://jinhuiguo.github.io//atom.xml" rel="self"/>
  <link href="https://jinhuiguo.github.io/"/>
- <updated>2020-12-22T14:09:31+08:00</updated>
+ <updated>2020-12-23T23:05:08+08:00</updated>
  <id>https://jinhuiguo.github.io//</id>
  <author>
    <name>Guojinhui</name>
@@ -142,6 +142,19 @@ end
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ok，现在可以直接ssh了
 
     ssh username@server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>在线guid生成</title>
+   <link href="https://jinhuiguo.github.io//2006/07/24/guid.html"/>
+   <updated>2006-07-24T00:00:00+08:00</updated>
+   <id>urn:uuid:b87da13a-a4dd-402f-b06a-cef7eeee2d80</id>
+   <content type="html">&lt;p&gt;全局唯一标识符（GUID，Globally Unique Identifier）是一种由算法生成的二进制长度为128位的数字标识符。&lt;/p&gt;
+
+&lt;p&gt;生成gudi网站&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://www.guidgen.com/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
  </entry>
