@@ -5,7 +5,7 @@
     <meta name="author" content="Guojinhui" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
-    <title>在Xcode中使用Lottie-OC</title>
+    <title>通过http代理服务器连接ssh</title>
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="/atom.xml" rel="alternate" title="Guojinhui blog" type="application/atom+xml" />
@@ -34,28 +34,28 @@
         <div id="content">
         <article>
   <section class="title">
-    <h2>在Xcode中使用Lottie-OC </h2>
+    <h2>通过http代理服务器连接ssh </h2>
   </section>
   <section class="meta">
   <span class="time">
-    <time datetime="2019-03-08">2019-03-08</time>
+    <time datetime="2019-10-13">2019-10-13</time>
   </span>
   
   <span class="tags">
     
-    <a href="/tags.html#Lottie-OC" title="Lottie-OC">#Lottie-OC</a>
+    <a href="/tags.html#ssh" title="ssh">#ssh</a>
     
-    <a href="/tags.html#Xcode" title="Xcode">#Xcode</a>
+    <a href="/tags.html#proxy" title="proxy">#proxy</a>
     
   </span>
   <!-- BEGIN this would not work on any other domain -->
   <span
     class           = "like-wrapper"
     like-shortname  = 'gopherwood'
-    like-identifier = 'urn:uuid:80599c6f-70ee-44f0-8e34-9eb7ed776fce'
-    like-name       = '在Xcode中使用Lottie-OC'
+    like-identifier = 'urn:uuid:b0a80dce-0a14-4957-94b4-639fcae2815a'
+    like-name       = '通过http代理服务器连接ssh'
     like-btn        = '&#xf087;'
-    like-link       = 'https://jinhuiguo.github.io//2019/03/08/lottie-oc.html'
+    like-link       = 'https://jinhuiguo.github.io//2019/10/13/ssh-via-proxy.html'
     ></span>
   <script type="text/javascript">
     var l = document.createElement('script');
@@ -66,92 +66,37 @@
   
   </section>
   <section class="post">
-  <p>以前研究过的问题希望都能在blog上记录下来，以便后续遇到同样的问题可以很快的解决。</p>
+  <p>今天着实让我很惊讶，ssh居然不能直接设置代理服务器，而必须通过tunnel（或者就是我太挫，没找到其他办法）</p>
 
 <ol>
-  <li>用CocoaPods安装Lottie动画库</li>
+  <li>
+    <p>找个Tunnel，比如<a href="http://www.agroman.net/corkscrew/corkscrew-2.0.tar.gz">corkscrew</a>，然后解开tar包，编译安装</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ./configure
+ make &amp; make install
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>设置ssh，编辑ssh配置文件，/etc/ssh/ssh_config</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> vi /etc/ssh/ssh_config
+</code></pre></div>    </div>
+
+    <p>然后加入</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Host *
+     ProxyCommand corkscrew proxy_server proxy_port %h %p
+</code></pre></div>    </div>
+
+    <p>如果需要验证文件的话，还要在后面加入验证文件，如下</p>
+  </li>
 </ol>
 
-<p>启动 Xcode 创建项目，项目路径必须是英文，比如：LottieDemo并保存。创建完项目必须完全退出 Xcode。打开Terminal，cd到自己的项目目录下（cd +空格+直接拖拽项目到终端），在terminal中运行 pod init 指令来创建一个Podfile。</p>
+<p>        ProxyCommand corkscrew proxy_server proxy_port %h %p authfile</p>
 
-<p>打开Podfile文件</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ok，现在可以直接ssh了
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Uncomment the next line to define a global platform for your project
-
-# platform :ios, '9.0'
-
-target 'AnswerWindow' do
-
-# Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-
-# use_frameworks!
-
-# Pods for AnswerWindow
-
-pod 'lottie-ios'
-
-end
-</code></pre></div></div>
-
-<p>我们只加一行pod ‘lottie-ios’来指出这是这个项目需要的pod。然后回Terminal运行下列指令：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pod install
-</code></pre></div></div>
-
-<p>CocoaPods会下载Lottie动画库并在Xcode项目中打包。打包结束后你会发现出现一个叫LottieDemo.xcworkspace.的新项目文件。在Xcode中打开这个文件并开始进行编码。</p>
-
-<p>2.Lottie使用</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "ViewController.h"
-#import &lt;Lottie/Lottie.h&gt;
-
-@interface ViewController ()
-
-@property (nonatomic,strong) LOTAnimationView *lottieHeart;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    self.lottieHeart = [LOTAnimationView animationNamed:@"heart"];
-
-    self.lottieHeart.contentMode = UIViewContentModeScaleAspectFit;
-
-//    self.heart.backgroundColor = [UIColor redColor];
-
-    [self.view addSubview:self.lottieHeart];
-
-    self.lottieHeart.loopAnimation = YES;
-
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.lottieHeart play];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.lottieHeart pause];
-
-}
-
-
-- (void)viewDidLayoutSubviews
-{
-    [super viewDidLayoutSubviews];
-    CGRect lottieRect = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-
-    self.lottieHeart.frame = lottieRect;
-}
-
-@end
-
+    ssh username@server
 </code></pre></div></div>
 
   </section>
@@ -159,7 +104,7 @@ end
   <div class="divider">
     <span>
     
-    <i class="fa fa-circle"></i>
+    <a href="/2019/07/24/guid.html"><i class="fa fa-chevron-left"></i></a>
     
     </span>
     <!-- BEGIN comment icon
@@ -169,7 +114,7 @@ end
 
     <span>
     
-    <a href="/2019/07/24/guid.html"><i class="fa fa-chevron-right"></i></a>
+    <i class="fa fa-circle"></i>
     
     </span>
   </div>
@@ -179,7 +124,7 @@ end
   <div id="disqus_thread"></div>
   <script type="text/javascript">
       var disqus_shortname = 'gopherwood';
-      var disqus_identifier = 'urn:uuid:80599c6f-70ee-44f0-8e34-9eb7ed776fce';
+      var disqus_identifier = 'urn:uuid:b0a80dce-0a14-4957-94b4-639fcae2815a';
 
       function leave_comment() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
