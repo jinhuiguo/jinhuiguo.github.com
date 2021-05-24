@@ -37,23 +37,21 @@
   
   <article class="content">
     <section class="title">
-      <h2><a href="/2019/10/13/ssh-via-proxy.html">通过http代理服务器连接ssh</a></h2>
+      <h2><a href="/2021/05/20/Showreel.html">2021 Showreel</a></h2>
     </section>
     <section class="meta">
     <span class="time">
-      <time datetime="2019-10-13">2019-10-13</time>
+      <time datetime="2021-05-20">2021-05-20</time>
     </span>
     
     <span class="tags">
       
-      <a href="/tags.html#ssh" title="ssh">#ssh</a>
-      
-      <a href="/tags.html#proxy" title="proxy">#proxy</a>
+      <a href="/tags.html#Showreel" title="Showreel">#Showreel</a>
       
     </span>
     
     <!-- BEGIN this would not work on any other domain -->
-    <span class="like-wrapper" like-shortname="gopherwood" like-identifier="urn:uuid:b0a80dce-0a14-4957-94b4-639fcae2815a" like-name="通过http代理服务器连接ssh" like-link="https://jinhuiguo.github.io//" like-btn="&#xf087;"></span>
+    <span class="like-wrapper" like-shortname="gopherwood" like-identifier="urn:25185d53-61aa-4763-a24b-4aa0a4e37673" like-name="2021 Showreel" like-link="https://jinhuiguo.github.io//" like-btn="&#xf087;"></span>
     <script type="text/javascript">
       var l = document.createElement('script'); l.type = 'text/javascript'; l.async = true;
       l.src = 'https://like.lhzhang.com/javascript/widget.js';
@@ -62,38 +60,8 @@
     <!-- END this would not work on any other domain -->
     </section>
     <section class="post">
-    <p>今天着实让我很惊讶，ssh居然不能直接设置代理服务器，而必须通过tunnel（或者就是我太挫，没找到其他办法）</p>
-
-<ol>
-  <li>
-    <p>找个Tunnel，比如<a href="http://www.agroman.net/corkscrew/corkscrew-2.0.tar.gz">corkscrew</a>，然后解开tar包，编译安装</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ./configure
- make &amp; make install
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>设置ssh，编辑ssh配置文件，/etc/ssh/ssh_config</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> vi /etc/ssh/ssh_config
-</code></pre></div>    </div>
-
-    <p>然后加入</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Host *
-     ProxyCommand corkscrew proxy_server proxy_port %h %p
-</code></pre></div>    </div>
-
-    <p>如果需要验证文件的话，还要在后面加入验证文件，如下</p>
-  </li>
-</ol>
-
-<p>        ProxyCommand corkscrew proxy_server proxy_port %h %p authfile</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ok，现在可以直接ssh了
-
-    ssh username@server
-</code></pre></div></div>
+    <iframe height="270" width="480" src="/Users/jinhuiguo/myblog/jinhuiguo.github.com/media/files/2021/05/20/Showreel 2021.mp4">
+</iframe>
 
     </section>
     </article>

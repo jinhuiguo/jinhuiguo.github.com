@@ -4,12 +4,22 @@
  <title>Guojinhui blog</title>
  <link href="https://jinhuiguo.github.io//atom.xml" rel="self"/>
  <link href="https://jinhuiguo.github.io/"/>
- <updated>2021-03-28T15:17:21+08:00</updated>
+ <updated>2021-05-24T13:57:18+08:00</updated>
  <id>https://jinhuiguo.github.io//</id>
  <author>
    <name>Guojinhui</name>
  </author>
 
+ 
+ <entry>
+   <title>2021 Showreel</title>
+   <link href="https://jinhuiguo.github.io//2021/05/20/Showreel.html"/>
+   <updated>2021-05-20T00:00:00+08:00</updated>
+   <id>urn:25185d53-61aa-4763-a24b-4aa0a4e37673</id>
+   <content type="html">&lt;iframe height=&quot;270&quot; width=&quot;480&quot; src=&quot;/Users/jinhuiguo/myblog/jinhuiguo.github.com/media/files/2021/05/20/Showreel 2021.mp4&quot;&gt;
+&lt;/iframe&gt;
+</content>
+ </entry>
  
  <entry>
    <title>通过http代理服务器连接ssh</title>
@@ -52,15 +62,11 @@
  </entry>
  
  <entry>
-   <title>在线guid生成</title>
+   <title>2021 Showreel</title>
    <link href="https://jinhuiguo.github.io//2019/07/24/guid.html"/>
    <updated>2019-07-24T00:00:00+08:00</updated>
    <id>urn:uuid:b87da13a-a4dd-402f-b06a-cef7eeee2d80</id>
-   <content type="html">&lt;p&gt;全局唯一标识符（GUID，Globally Unique Identifier）是一种由算法生成的二进制长度为128位的数字标识符。&lt;/p&gt;
-
-&lt;p&gt;生成gudi网站&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://www.guidgen.com/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+   <content type="html">
 </content>
  </entry>
  
